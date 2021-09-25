@@ -1,0 +1,28 @@
+{
+  "name": "js-ml-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@tensorflow-models/speech-commands": "^0.4.0",
+    "@tensorflow/tfjs": "^1.3.1",
+    "@tensorflow/tfjs-node": "^1.2.9",
+    "@tensorflow/tfjs-vis": "^1.2.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel 3linear-regression/index.html",
+    "dev2": "parcel 4height-weight-归一化/index.html",
+    "dev3": "parcel 5logistic-regression/index.html",
+    "dev4": "parcel 6xor/index.html",
+    "dev7": "parcel 7iris/index.html",
+    "dev8": "parcel 8overfit/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}
