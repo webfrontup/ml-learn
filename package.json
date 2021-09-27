@@ -19,7 +19,8 @@
     "dev4": "parcel 6xor/index.html",
     "dev7": "parcel 7iris/index.html",
     "dev8": "parcel 8overfit/index.html",
-    "dev9": "parcel 12brand/index.html"
+    "dev9": "parcel 12brand/index.html",
+    "dev10": "parcel 14speech-cn/index.html"
   },
   "author": "",
   "license": "ISC",

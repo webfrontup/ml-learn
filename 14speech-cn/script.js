@@ -12,9 +12,9 @@ window.onload = async () => {
         MODEL_PATH + '/speech/metadata.json'
     );
     await recognizer.ensureModelLoaded();
-    transferRecognizer = recognizer.createTransfer('轮播图');
+    transferRecognizer = recognizer.createTransfer('轮播图'); // 创建迁移学习器
 };
-
+// 收集样本
 window.collect = async (btn) => {
     btn.disabled = true;
     const label = btn.innerText;
@@ -24,7 +24,7 @@ window.collect = async (btn) => {
     btn.disabled = false;
     document.querySelector('#count').innerHTML = JSON.stringify(transferRecognizer.countExamples(), null, 2);
 };
-
+// 开始训练
 window.train = async () => {
     await transferRecognizer.train({
         epochs: 30,
@@ -41,7 +41,7 @@ window.toggle = async (checked) => {
         await transferRecognizer.listen(result => {
             const { scores } = result;
             const labels = transferRecognizer.wordLabels();
-            const index = scores.indexOf(Math.max(...scores));
+            const index = scores.indexOf(Math.max(...scores));// 获取最准确的值
             console.log(labels[index]);
         }, {
             overlapFactor: 0,
